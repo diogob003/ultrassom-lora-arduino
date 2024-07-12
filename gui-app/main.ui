@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkApplicationWindow" id="winMain">
+    <property name="icon-name">network-wired</property>
+    <property name="title">Nível reservatório</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-bottom">10</property>
+        <property name="margin-end">10</property>
+        <property name="margin-start">10</property>
+        <property name="margin-top">10</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkBox" id="boxOptions">
+            <property name="halign">center</property>
+            <property name="homogeneous">True</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+            <property name="valign">center</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Distância mínima (cm)</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryMin">
+                <property name="input-purpose">numeric</property>
+                <property name="placeholder-text">min sensor</property>
+                <property name="primary-icon-activatable">False</property>
+                <property name="primary-icon-sensitive">False</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Distância máxima (cm)</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryMax">
+                <property name="input-purpose">numeric</property>
+                <property name="placeholder-text">max sensor</property>
+                <property name="primary-icon-activatable">False</property>
+                <property name="primary-icon-sensitive">False</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Porta</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkDropDown" id="dropdownPort">
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Taxa de transmissão</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkDropDown" id="dropdownRate">
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item>9600</item>
+                      <item>19200</item>
+                      <item>38400</item>
+                      <item>57600</item>
+                      <item>115200</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnSubmit">
+                <property name="label">Capturar dados</property>
+                <property name="margin-top">10</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxPreview">
+            <property name="hexpand">True</property>
+            <property name="orientation">vertical</property>
+            <property name="valign">baseline-center</property>
+            <property name="width-request">400</property>
+            <child>
+              <object class="GtkTextView" id="txtVwQuadros">
+                <property name="editable">False</property>
+                <property name="input-purpose">digits</property>
+                <property name="justification">center</property>
+                <property name="margin-bottom">10</property>
+                <property name="margin-top">10</property>
+                <property name="monospace">True</property>
+                <property name="valign">start</property>
+                <property name="wrap-mode">word-char</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkSettings">
+    <property name="gtk-application-prefer-dark-theme">True</property>
+    <property name="gtk-theme-name">Default-dark</property>
+  </object>
+</interface>

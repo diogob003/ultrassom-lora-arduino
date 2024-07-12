@@ -1,0 +1,72 @@
+# OS junk files
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_Store
+.DS_Store
+.~*#
+
+# User trash
+*.pdf
+*.rtf
+*.odt
+to[dD]o.md
+
+# Editor, IDE, VScodeVim
+.vscode/
+*~
+.idea
+\#*#
+.cmb.db
+.ipynb_checkpoints
+
+# Runtime
+node_modules/
+yarn.lock
+package-lock.json
+__pycache__
+__pypackages__
+*.py[cod]
+*$py.class
+
+# Application garbage
+*.o
+*.exe
+*.ko
+*.obj
+*.elf
+*.data
+*.dll
+*.so
+*.so.*
+*.dylib
+*.sqlite3
+*.sqlite
+diagrama[0-9].png
+diagrama[0-9].jpg
+img[0-9].png
+img[0-9].jpg
+
+# Debug stuff
+*.dSYM
+*.su
+*.idb
+*.pdb
+
+# Environments clutter
+.env
+.venv
+env/
+venv/
+
+# Building / packaging droppings
+.Python
+build
+_build
+.cache
+*.egg-info/
+.installed.cfg
+*.egg
+*.manifest
+*.spec
+*.log
+MANIFEST
