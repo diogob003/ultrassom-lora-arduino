@@ -38,7 +38,7 @@ sudo apt install git python3 libgtk-4-1 python3-gi python3-serial python3-matplo
 - Primeiro instale o gerenciador de pacotes [Msys2](https://www.msys2.org/)
 - Em seguida abra o terminal `ucrt64` e instale as dependências
 ```sh
-pacman -S git python mingw-w64-ucrt-x86_64-gtk4 mingw-w64-ucrt-x86_64-python-gobject mingw-w64-ucrt-x86_64-python-pyserial mingw-w64-ucrt-x86_64-python-matplotlib
+pacman -S git mingw-w64-ucrt-x86_64-python3 mingw-w64-ucrt-x86_64-gtk4 mingw-w64-ucrt-x86_64-python-gobject mingw-w64-ucrt-x86_64-python-pyserial mingw-w64-ucrt-x86_64-python-matplotlib
 ```
 
 ## Como iniciar o aplicativo?

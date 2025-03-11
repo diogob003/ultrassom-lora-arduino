@@ -28,7 +28,7 @@ class MyApp(Gtk.Application):
         self.connect("data_received", self.on_data_received)
         self.connect("activate", self.on_activate)
         self.connect("shutdown", self.on_quit_shutdown)
-        self.level_history = [70, 80, 86, 62, 53, 40, 33, 20, 60]
+        self.level_history = []
         self.options = convert_to_dot_notation({
             "serial_port": "/dev/cu.SLAB_USBtoUART",
             "sqlite3db": "fluid_level_history.sqlite3",

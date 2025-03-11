@@ -13,15 +13,21 @@
             ↑
     Rx  ----+-1kΩ-> Tx(Arduino)
     Tx  ----------> Rx(Arduino)
+    AUX ----------> any digital pin
+    M1  ----------> any digital pin
+    MO  ----------> any digital pin
 */
-#define PIN_RX 12 /* Arduino RX, connect to LoRa TX */
-#define PIN_TX 13 /* Arduino TX, connect to LoRa RX */
-#define PIN_M0 11
-#define PIN_M1 10
-#define PIN_AX 9
+#define PIN_LORA_AUX 12
+#define PIN_LORA_TX 11
+#define PIN_LORA_RX 10
+#define PIN_LORA_M1 9
+#define PIN_LORA_M0 8
 
-SoftwareSerial ESerial(PIN_RX, PIN_TX); // create serial port
-EBYTE Transceiver(&ESerial, PIN_M0, PIN_M1, PIN_AX); // create the transceiver object
+#define PIN_ARDUINO_RX PIN_LORA_TX/* Arduino RX, connect to LoRa TX */
+#define PIN_ARDUINO_TX PIN_LORA_RX/* Arduino TX, connect to LoRa RX */
+
+SoftwareSerial ESerial(PIN_ARDUINO_RX, PIN_ARDUINO_TX); // create serial port
+EBYTE Transceiver(&ESerial, PIN_LORA_M0, PIN_LORA_M1, PIN_LORA_AUX); // create the transceiver object
 
 
 /*
@@ -30,7 +36,7 @@ EBYTE Transceiver(&ESerial, PIN_M0, PIN_M1, PIN_AX); // create the transceiver o
     Gnd ----------> Gnd
 */
 #define PIN_TRIG 4
-#define PIN_ECHO 5
+#define PIN_ECHO 3
 
 //             trigger, echo,    min, max 
 HCSR04 hcsr04(PIN_TRIG, PIN_ECHO, -1, -1);
